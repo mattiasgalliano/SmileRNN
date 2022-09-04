@@ -93,7 +93,7 @@ def run():
     parser = argparse.ArgumentParser(description="parser for model training")
     parser.add_argument("-d", "--data", type=str, default='data/chembl_29_smiles.csv')
     parser.add_argument("-c", "--config", type=str, default="configs/base.json")
-    parser.add_argument("-w", "--weights", type=str, default='weights/ckpt_3')
+    parser.add_argument("-w", "--weights", type=str)
     parser.add_argument("-m", "--max_seq_len", type=int, default=30)
     parser.add_argument("-n", "--num", type=int, default=100)
     parser.add_argument("-r", '--rej', type=bool, default=1)
