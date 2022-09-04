@@ -6,6 +6,7 @@ import torch.nn as nn
 from torch import optim
 import argparse # for cli
 import random # for train data shuffle
+import os
 
 from torch.utils.tensorboard import SummaryWriter # for logging
 
@@ -90,6 +91,7 @@ def train(model, mols, char2idx, n_unique_chars, max_seq_len, device, criterion,
             optimizer.step()
         
         if save:
+            if not os.path.exists('weights'): os.mkdir('weights', exist_ok=True)
             checkpoint = f'weights/train_e_{e}'
             torch.save(model.state_dict(), checkpoint)
 

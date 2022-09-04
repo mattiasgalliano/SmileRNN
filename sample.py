@@ -7,6 +7,7 @@ from rdkit.Chem.QED import default, qed
 import matplotlib.pyplot as plt # for visualization
 from model import SmileRNN
 import utils
+import os
 
 # samples moleclue from trained model
 def sample(model, char2idx, idx2char, start_char_list, max_seq_len, device):
@@ -150,6 +151,7 @@ def run():
     
     if args.save:
         for i, s in enumerate(samples):
+            if not os.path.exists('output'): os.mkdir('output', exist_ok=True)
             mol = MolFromSmiles(s)
             qed = default(mol)
             MolToFile(mol, f"output/{i}.png")
