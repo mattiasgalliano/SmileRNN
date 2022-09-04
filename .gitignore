@@ -1,4 +1,4 @@
-data/
-output/
-runs/
-weights/
+data/*
+output/*
+runs/*
+weights/*
