@@ -6,7 +6,7 @@ Generative RNN with optional policy gradient optimization to generate novel, uni
 
 Setup: conda env create --name SmileRNN --file=env.yml
 
-Training data: "\n"-seperated SMILES strings in data/ directory, data accessed from ChEMBL (https://www.ebi.ac.uk/chembl/)
+Training data: "\n"-seperated SMILES strings in "data/" directory, data accessed from ChEMBL (https://www.ebi.ac.uk/chembl/)
 
 To train, run train.py
 
