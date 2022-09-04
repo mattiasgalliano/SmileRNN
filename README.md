@@ -1,6 +1,6 @@
 # SmileRNN
 
-Generative RNN with optional policy gradient optimization to generate novel, unqiue molecules with optimized QED(1) scores, which indicate their pharmacological potential.
+Generative RNN with optional policy gradient optimization to generate novel, unique molecules with optimized QED(1) scores, which indicate their pharmacological potential.
 
 1. Bickerton, G. Richard, et al. "Quantifying the chemical beauty of drugs." Nature chemistry 4.2 (2012): 90-98.
 
