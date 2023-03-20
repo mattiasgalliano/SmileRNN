@@ -8,10 +8,6 @@ Molecules are represented in simplified molecular-input line-entry system (SMILE
 
 ![Generated Molecule](examples/example_mol.png)
 
-<h2>Example QED Distrubtion for 100 Generated Molecules</h2>
-
-![QED Score Distribution for 100 Molecules](examples/example_dist.png)
-
 https://www.ebi.ac.uk/chembl/ \
 Bickerton, G. Richard, et al. "Quantifying the chemical beauty of drugs." Nature chemistry 4.2 (2012): 90-98.
 
