@@ -17,6 +17,7 @@ Bickerton, G. Richard, et al. "Quantifying the chemical beauty of drugs." Nature
 
 ```
 git clone https://github.com/mattiasgalliano/SmileRNN.git \
+&& cd SmileRNN \
 && conda env create -f 'env.yml' \
 && conda activate smilernn
 ```
