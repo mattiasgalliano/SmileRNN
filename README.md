@@ -6,7 +6,7 @@ Use SmileRNN to generate novel, unique molecules with optimized QED scores, a me
 
 Molecules are represented in simplified molecular-input line-entry system (SMILES) format, SMILES data are accessed from ChEMBL.
 
-<h2>Example Generated Molecule</h2>
+<h2>Example</h2>
 
 ![Generated Molecule](examples/example_mol.png)
 
