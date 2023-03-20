@@ -173,7 +173,7 @@ def run():
         mean = np.mean(QEDs)
 
         plt.hist(QEDs, bins=int(len(QEDs)/10), density=True)
-        plt.title(f"Mean QED: {mean}")
+        plt.title(f"Mean QED: {mean:.2f}")
 
         plt.show()
 
