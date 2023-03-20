@@ -1,6 +1,8 @@
 <h1>SmileRNN</h1>
 
-SmileRNN is a generative RNN with policy gradient optimization for chemical molecules. Use SmileRNN to generate novel, unique molecules with optimized QED scores, a measure of pharmacological potential.
+SmileRNN is a generative RNN with policy gradient optimization for chemical molecules.
+
+Use SmileRNN to generate novel, unique molecules with optimized QED scores, a measure of pharmacological potential.
 
 Molecules are represented in simplified molecular-input line-entry system (SMILES) format, SMILES data are accessed from ChEMBL.
 
