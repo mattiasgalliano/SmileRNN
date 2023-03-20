@@ -4,9 +4,9 @@ SmileRNN is a generative RNN with policy gradient optimization for chemical mole
 
 Molecules are represented in simplified molecular-input line-entry system (SMILES) format, SMILES data are accessed from ChEMBL.
 
-![Generated Molecule](examples/example_mol.png)
+![Generated Molecule](examples/example_mol.png "Generated Molecule")
 
-![QED Score Distribution for 100 Molecules](examples/example_dist.png)
+![QED Score Distribution for 100 Molecules](examples/example_dist.png "QED Score Distribution for 100 Molecules")
 
 https://www.ebi.ac.uk/chembl/ \
 Bickerton, G. Richard, et al. "Quantifying the chemical beauty of drugs." Nature chemistry 4.2 (2012): 90-98.
