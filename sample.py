@@ -151,7 +151,7 @@ def run():
     
     if args.save:
         for i, s in enumerate(samples):
-            if not os.path.exists('output'): os.mkdir('output', exist_ok=True)
+            if not os.path.exists('output'): os.mkdir('output')
             mol = MolFromSmiles(s)
             qed = default(mol)
             MolToFile(mol, f"output/{i}.png")
