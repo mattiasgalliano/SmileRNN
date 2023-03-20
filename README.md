@@ -1,15 +1,48 @@
-# SmileRNN
+<h1>SmileRNN</h1>
 
-Generative RNN with optional policy gradient optimization to generate novel, unique molecules with optimized QED(1) scores, which indicate their pharmacological potential.
+SmileRNN is a generative RNN with policy gradient optimization for chemical molecules. Use SmileRNN to generate novel, unique molecules with optimized QED scores, a measure of pharmacological potential.
 
-1. Bickerton, G. Richard, et al. "Quantifying the chemical beauty of drugs." Nature chemistry 4.2 (2012): 90-98.
+Molecules are represented in simplified molecular-input line-entry system (SMILES) format, SMILES data are accessed from ChEMBL.
 
-Setup: conda env create --name SmileRNN --file=env.yml
+![Generated Molecule](examples/example_mol.png)
 
-Training data: "\n"-seperated SMILES strings in "data/" directory, data accessed from ChEMBL (https://www.ebi.ac.uk/chembl/)
+![QED Score Distribution for 100 Molecules](examples/example_dist.png)
 
-To train, run train.py
+https://www.ebi.ac.uk/chembl/ \
+Bickerton, G. Richard, et al. "Quantifying the chemical beauty of drugs." Nature chemistry 4.2 (2012): 90-98.
 
-To optimize, run optimize.py with desired training weights
+<h2>Install</h2>
 
-To generate molecules, run sample.py with desired training weights
+```
+git clone https://github.com/mattiasgalliano/SmileRNN.git \
+&& conda env create -f 'env.yml' \
+&& conda activate smilernn
+```
+
+<h2>Train</h2>
+Train model on SMILES strings in CSV format
+
+```
+python train.py --data data/chembl_29_smiles.csv
+```
+
+<h2>Optimize</h2>
+Optimize model with policy gradient optimization
+
+```
+python optimize.py --weights weights/train_e_0 --iters 5000
+```
+
+<h2>Sample</h2>
+Sample model to generate e.g. 100 molecules; save lewis structure images, plot QED score distribution
+
+```
+python sample.py --weights weights/train_e_0_optim_iter_5000 --num 100
+```
+
+<h2>Tensorboard</h2>
+Visualize training, optimization experiment loss curves etc. with tensorboard
+
+```
+tensorboard --logdir runs
+```
