@@ -1,3 +1,5 @@
 output/*
 runs/*
 weights/*
+.idea
+__pycache__
