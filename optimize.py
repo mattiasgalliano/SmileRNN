@@ -86,8 +86,12 @@ def optimize(model, start_char_list, char2idx, idx2char, max_seq_len, device, op
 
         optimizer.zero_grad()
         policy_loss = torch.cat(rewards).sum() #* -1 # TODO wrong dir???
-        if iter % print_every == 0: print(iter, "result", result, "loss", policy_loss.item(), "reward", total_reward)
-        if iter % log_every == 0: writer.add_scalar("Loss/iter", policy_loss.item(), i)
+        if iter % print_every == 0 and i != 0:
+            tmp = policy_loss.item()
+            print(iter, "result", result, "loss", tmp, "reward", total_reward)
+        if iter % log_every == 0 and i != 0:
+            tmp = policy_loss.item()
+            writer.add_scalar("Loss/iter", tmp, i)
         policy_loss.backward()
         optimizer.step()
     
@@ -109,7 +113,7 @@ def run():
     parser.add_argument("-r", "--random_seed", type=int, default=123)
     parser.add_argument("-s", "--save", type=int, default=1)
     parser.add_argument("-p", "--print_every", type=int, default=50)
-    parser.add_argument("-l", "--log_every", type=int, default=50)
+    parser.add_argument("-l", "--log_every", type=int, default=1)
     args = parser.parse_args()
 
     smiles = utils.read_data(args.data)
