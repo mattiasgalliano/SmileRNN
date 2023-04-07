@@ -135,7 +135,7 @@ def run():
         device
     )
 
-    model.load_state_dict(torch.load(args.weights))
+    model.load_state_dict(torch.load(args.weights)) if torch.cuda.is_available() else model.load_state_dict(torch.load(args.weights, map_location="cpu"))
     
     print("sampling...")
     samples = []
